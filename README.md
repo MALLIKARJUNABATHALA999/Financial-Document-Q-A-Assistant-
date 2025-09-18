@@ -1,3 +1,6 @@
+<img width="1906" height="1021" alt="Screenshot 2025-09-18 233818" src="https://github.com/user-attachments/assets/5410d804-51ba-492a-a06f-8e856ad5bba4" />
+
+
 # Financial Document Q&A Assistant
 
 A powerful RAG (Retrieval-Augmented Generation) system that processes financial documents and provides intelligent Q&A capabilities using local language models.
@@ -30,7 +33,7 @@ Installation
 Clone the repository
 
 bash
-git clone https://github.com/yourusername/financial-qa-assistant.git
+git clone repo-url
 cd financial-qa-assistant
 Install dependencies
 
@@ -69,6 +72,8 @@ financial-qa-assistant/
 │   └── qa_pipeline.py        # RAG pipeline with vector database
 ├── requirements.txt          # Python dependencies
 └── README.md
+
+
 💻 Usage
 1. Upload Documents
 Select PDF, Excel, or CSV files using the file uploader
@@ -208,4 +213,4 @@ Chroma - Vector database
 
 💬 Discussions: Join discussions
 
-📧 Contact: Replace with your email
+📧 Contact: bathalamallikarjuna666@gmail.com
