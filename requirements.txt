@@ -1,0 +1,13 @@
+streamlit
+pdfplumber
+pandas
+openpyxl
+langchain
+langchain-community
+langchain-text-splitters
+chromadb
+ollama
+transformers
+torch
+soundfile
+python-pptx
