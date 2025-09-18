@@ -29,7 +29,7 @@ Installation
 Clone the repository
 
 bash
-git clone https://github.com/your-username/financial-qa-assistant.git
+git clone  repo url
 cd financial-qa-assistant
 Install dependencies
 
