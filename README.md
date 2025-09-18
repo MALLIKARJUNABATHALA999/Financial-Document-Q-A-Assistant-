@@ -1,10 +1,11 @@
-# Financial-Document-Q&A-Assistant-
+#Financial Document Q&A Assistant
+
 A powerful RAG (Retrieval-Augmented Generation) system that processes financial documents and provides intelligent Q&A capabilities using local language models.
 
 🎯 Overview
-This application transforms static financial documents (PDF, Excel, CSV) into interactive, queryable resources. Upload your financial statements, expense reports, or accounts data and ask questions in natural language to get instant, accurate answers.
+Transform static financial documents (PDF, Excel, CSV) into interactive, queryable resources. Upload your financial statements, expense reports, or accounts data and ask questions in natural language to get instant, accurate answers.
 
-✨ Features
+✨ Key Features
 📄 Multi-Format Support: PDF, Excel (.xlsx, .xls), and CSV files
 
 🧠 Local AI Processing: Uses Ollama for privacy-focused, offline operation
@@ -19,7 +20,7 @@ This application transforms static financial documents (PDF, Excel, CSV) into in
 
 🚀 Quick Start
 Prerequisites
-Python 3.8 or higher
+Python 3.8+
 
 Ollama installed and running
 
@@ -29,13 +30,21 @@ Installation
 Clone the repository
 
 bash
-git clone  repo url
+git clone https://github.com/yourusername/financial-qa-assistant.git
 cd financial-qa-assistant
 Install dependencies
 
 bash
 pip install -r requirements.txt
-Install and setup Ollama
+Install system dependencies (for PDF OCR)
+
+bash
+# Ubuntu/Debian
+sudo apt-get install tesseract-ocr poppler-utils
+
+# macOS
+brew install tesseract poppler
+Setup Ollama
 
 bash
 # Install Ollama
@@ -47,7 +56,7 @@ Run the application
 
 bash
 streamlit run main.py
-Open your browser to http://localhost:8501
+Open browser to http://localhost:8501
 
 📁 Project Structure
 text
@@ -55,15 +64,14 @@ financial-qa-assistant/
 ├── main.py                    # Streamlit web application
 ├── extractors/
 │   ├── pdf_extraction.py     # PDF processing with multiple engines
-│   └── excel_extraction.py   # Excel/CSV processing with financial optimization
+│   └── excel_extraction.py   # Excel/CSV processing 
 ├── processing/
 │   └── qa_pipeline.py        # RAG pipeline with vector database
 ├── requirements.txt          # Python dependencies
-├── chromadb/                 # Vector database (auto-created)
 └── README.md
 💻 Usage
 1. Upload Documents
-Drag and drop or select PDF, Excel, or CSV files
+Select PDF, Excel, or CSV files using the file uploader
 
 Supported formats: .pdf, .xlsx, .xls, .csv
 
@@ -72,13 +80,11 @@ Maximum recommended size: 200MB
 2. Process Documents
 Click "🚀 Process Document" to extract and index content
 
-View extraction summary with document statistics
+View extraction summary showing document statistics
 
-Processing time varies by document size and complexity
+Processing time varies by document size
 
 3. Ask Questions
-Start asking questions about your financial data:
-
 Example Questions:
 
 "What is the total revenue for 2022?"
@@ -91,7 +97,7 @@ Example Questions:
 
 "Show me the cash flow breakdown"
 
-📋 Requirements
+📋 Dependencies
 text
 streamlit==1.28.0
 langchain==0.0.350
@@ -104,25 +110,7 @@ openpyxl==3.1.2
 pdf2image==1.16.3
 pytesseract==0.3.10
 ollama==0.1.7
-🔧 Configuration
-Environment Variables
-bash
-# Optional customization
-export CHROMADB_PATH="./custom_chromadb"
-export CHUNK_SIZE="1500"
-export RETRIEVAL_K="100"
-Supported Models
-Any Ollama-compatible model:
-
-llama2 (recommended)
-
-mistral
-
-codellama
-
-dolphin-mixtral
-
-📊 Supported Document Types
+📊 Supported Documents
 PDF Documents
 Financial statements (Income, Balance Sheet, Cash Flow)
 
@@ -142,10 +130,8 @@ Accounts receivable/payable
 Budget and forecast data
 
 🧪 Testing
-Sample Test Cases
-Upload the included sample files and try these questions:
-
-For Expense-Claims.xlsx:
+Sample Questions by Document Type
+For Expense Claims:
 
 "What is the total amount of expense claims?"
 
@@ -153,7 +139,7 @@ For Expense-Claims.xlsx:
 
 "Which category has the most expenses?"
 
-For Accounts-Receivable.xlsx:
+For Accounts Receivable:
 
 "What is the total accounts receivable amount?"
 
@@ -166,31 +152,23 @@ Common Issues
 Ollama Model Not Found
 
 bash
-# Check if Ollama is running
 ollama list
-
-# Pull missing model
 ollama pull llama2
 PDF Processing Errors
 
-bash
-# Install system dependencies (Ubuntu/Debian)
-sudo apt-get install tesseract-ocr poppler-utils
+Ensure tesseract and poppler are installed
 
-# macOS
-brew install tesseract poppler
+Check file permissions and format
+
 Large File Processing
 
-Reduce file size or split into smaller documents
+Reduce file size or use CSV format for large datasets
 
 Increase system RAM if possible
-
-Use CSV format for large datasets when possible
 
 Vector Database Issues
 
 bash
-# Clear and rebuild database
 rm -rf chromadb/
 # Restart app and reprocess documents
 🔒 Privacy & Security
@@ -207,27 +185,27 @@ Fork the repository
 
 Create a feature branch (git checkout -b feature/amazing-feature)
 
-Commit your changes (git commit -m 'Add amazing feature')
+Commit changes (git commit -m 'Add amazing feature')
 
-Push to the branch (git push origin feature/amazing-feature)
+Push to branch (git push origin feature/amazing-feature)
 
 Open a Pull Request
 
-📈 Performance
-Typical Processing Times
-Small PDF (1-10 pages): 10-30 seconds
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Excel file (100-1000 rows): 15-45 seconds
+🙏 Acknowledgments
+LangChain - LLM application framework
 
-Large documents (1000+ records): 1-3 minutes
+Streamlit - Web app framework
 
-Query response: 2-10 seconds
+Ollama - Local LLM platform
 
-System Requirements
-Minimum: 4GB RAM, 2GB storage
+Chroma - Vector database
 
-Recommended: 8GB+ RAM, 5GB+ storage
+📞 Support
+🐛 Issues: Create an issue
 
-CPU: Modern multi-core processor recommended
+💬 Discussions: Join discussions
 
-📄 
+📧 Contact: Replace with your email
