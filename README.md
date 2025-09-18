@@ -1,1 +1,1 @@
-# Financial-Document-Q-A-Assistant-
+# Financial-Document-Q&A-Assistant-
