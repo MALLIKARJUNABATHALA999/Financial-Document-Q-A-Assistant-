@@ -1,4 +1,4 @@
-#Financial Document Q&A Assistant
+# Financial Document Q&A Assistant
 
 A powerful RAG (Retrieval-Augmented Generation) system that processes financial documents and provides intelligent Q&A capabilities using local language models.
 
